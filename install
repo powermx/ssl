@@ -42,7 +42,7 @@ clear
 cat stunnel.crt stunnel.key > stunnel.pem 
 mv stunnel.pem /etc/stunnel/
 clear
-echo -e "\033[1;31mESCRIBA EL PUERTO SSL"
+echo -e "\033[1;31mESCRIBA EL PUERTO SSL A UTILIZAR"
 read -p ": " port
 clear
 echo "client = no " >> /etc/stunnel/stunnel.conf
@@ -56,23 +56,23 @@ echo "FILES="/etc/stunnel/*.conf" " >> /etc/default/stunnel4
 echo "OPTIONS="" " >> /etc/default/stunnel4
 echo "PPP_RESTART=0" >> /etc/default/stunnel4
 
-echo -e "\033[1;33m ######################################"
-echo -e "\033[1;31mI N I C I A N D O  O  STUNNEL4"
-echo -e "\033[1;33m ######################################"
+echo -e "\033[1;33m **********************************"
+echo -e "\033[1;31mI N I C I A N D O  -  STUNNEL4"
+echo -e "\033[1;33m **********************************"
 sleep 1
 service ssh restart 1>/dev/null 2 /dev/null
 service stunnel4 start 1>/dev/null 2 /dev/null
 service stunnel4 restart 1>/dev/null 2 /dev/null
 clear
-echo -e "\033[1;33m ###########REINICIADO...###########"
+echo -e "\033[1;33m ***********REINICIADO...*************"
 clear
 
-echo -e "\033[1;33m ######################################"
+echo -e "\033[1;33m **********************************"
 echo -e "\033[1;31mCONFIGURACION SSL CREADA CON EXITO"
-echo -e "\033[1;33m ######################################"
+echo -e "\033[1;33m **********************************"
 echo -e "\033[1;33m- - - - -> \033[01;34mSU IP HOST:\033[0m $ip"
 sleep 1
-echo -e "\033[1;31mReinicie su VPS (Opcional)"
+echo -e "\033[1;31mReinicie su VPS (Opcional) - sudo reboot"
 sleep 2
 echo -e "\033[1;33m- - ->>C A N A L \033[01;34mhttp://t.me/PwrMX"
 echo -e "\033[1;33m- - ->>Modulo VPSPack \033[01;34m@PowerMX"
